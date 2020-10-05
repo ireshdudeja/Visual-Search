@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2Dn-ZY-qzJ">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="TN1-ph-Y0r">
+            <objects>
+                <viewController id="2Dn-ZY-qzJ" customClass="HomeViewController" customModule="SumerianARKitStarter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8qC-Db-dmv"/>
+                        <viewControllerLayoutGuide type="bottom" id="O4b-Vd-WdB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DMd-DF-cWE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zSY-4w-rCF">
+                                <rect key="frame" x="16" y="99" width="343" height="396"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="396" id="sSA-1a-Joe"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ck6-nE-9oS">
+                                <rect key="frame" x="16" y="555" width="343" height="96"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqK-w7-eDH">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Pick Image"/>
+                                        <connections>
+                                            <action selector="imagePickerButtonTapped:" destination="2Dn-ZY-qzJ" eventType="touchUpInside" id="hUI-Ie-paw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2s-Th-66D">
+                                        <rect key="frame" x="0.0" y="60" width="343" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Find Similar Images"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="e2g-rc-Bnd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ck6-nE-9oS" firstAttribute="top" secondItem="zSY-4w-rCF" secondAttribute="bottom" constant="60" id="1VA-iT-gRa"/>
+                            <constraint firstItem="zSY-4w-rCF" firstAttribute="trailing" secondItem="DMd-DF-cWE" secondAttribute="trailingMargin" id="6MG-bP-x9c"/>
+                            <constraint firstItem="zSY-4w-rCF" firstAttribute="leading" secondItem="DMd-DF-cWE" secondAttribute="leadingMargin" id="Ncp-Qm-qBV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ck6-nE-9oS" secondAttribute="trailing" id="R27-xX-ekj"/>
+                            <constraint firstItem="ck6-nE-9oS" firstAttribute="leading" secondItem="DMd-DF-cWE" secondAttribute="leadingMargin" id="bgO-NK-mOT"/>
+                            <constraint firstItem="zSY-4w-rCF" firstAttribute="top" secondItem="8qC-Db-dmv" secondAttribute="bottom" constant="55" id="dNp-qu-WiE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagePickerButton" destination="eqK-w7-eDH" id="jbO-QS-73n"/>
+                        <outlet property="imageView" destination="zSY-4w-rCF" id="Lua-Lx-WIQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Pc-dc-ioG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55.200000000000003" y="-293.3497536945813"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SumerianARKitStarter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tof-8F-xnW"/>
+                        <viewControllerLayoutGuide type="bottom" id="XPn-LB-yVg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrr-Gd-oAg">
+                                <rect key="frame" x="0.0" y="44" width="375" height="755"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XPn-LB-yVg" firstAttribute="top" secondItem="wrr-Gd-oAg" secondAttribute="bottom" constant="-21" id="6Yn-Hj-PPH"/>
+                            <constraint firstItem="wrr-Gd-oAg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="etJ-bY-lHk"/>
+                            <constraint firstItem="wrr-Gd-oAg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tbD-94-9k1"/>
+                            <constraint firstItem="wrr-Gd-oAg" firstAttribute="top" secondItem="Tof-8F-xnW" secondAttribute="bottom" id="xV3-bL-pkm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="wrr-Gd-oAg" id="anB-1p-Hsb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="-292"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
